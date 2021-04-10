@@ -1,0 +1,7 @@
+{
+  "name": "IServiceProj",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
