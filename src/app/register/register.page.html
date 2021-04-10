@@ -5,5 +5,50 @@
 </ion-header>
 
 <ion-content>
+  <form method="post" action="">
+    <h1>Cadastro</h1>
+    <p>
+        <label for="senha_cad">Nome</label>
+        <input id="senha_cad" name="senha_cad" required="required" type="text" placeholder="" />
+    </p>
+    <p>
+        <label for="email_cad">E-mail</label>
+        <input  id="email_cad" name="email_cad" required="required" type="email" placeholder="" />
+    </p>
 
+    <p>
+        <label for="senha_cad">Senha</label>
+        <input  id="senha_cad" name="senha_cad" required="required" type="password" placeholder="" />
+    </p>
+    <p>
+        <label for="senha_cad">Confirmar Senha</label>
+        <input  id="senha_cad" name="senha_cad" required="required" type="password" placeholder="" />
+    </p>
+    <p>
+        <label for="senha_cad">CNPJ</label>
+        <input  id="senha_cad" name="senha_cad" required="required" type="text" placeholder="" />
+    </p>
+    <p>
+        <label for="senha_cad">Nome Empresa</label>
+        <input  id="senha_cad" name="senha_cad" required="required" type="text" placeholder="" />
+    </p>
+    <p>
+        <label for="senha_cad">CPF</label>
+        <input  id="senha_cad" name="senha_cad" required="required" type="text" placeholder="" />
+    </p>
+    <p>
+        <label for="senha_cad">Telefone</label>
+        <input  id="senha_cad" name="senha_cad" required="required" type="text" placeholder="" />
+    </p>
+
+
+    <p>
+        <input type="submit" value="cadastrar" (click)="register()" />
+    </p>
+
+    <p class="link">
+        Já tem conta?
+        <a href="login"> Ir para Login </a>
+    </p>
+</form>
 </ion-content>
