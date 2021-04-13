@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
- 
+
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'feed',
     pathMatch: 'full'
   },
   {
@@ -19,7 +19,7 @@ const routes: Routes = [
   {
     path: 'feed',
     loadChildren: () => import('./feed/feed.module').then( m => m.FeedPageModule)
-  },
+  }
 ];
 
 @NgModule({
