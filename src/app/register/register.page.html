@@ -1,12 +1,14 @@
 <ion-header>
   <ion-toolbar>
-      I-Service
+    <ion-title> I-Service </ion-title> 
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <form method="post" action="">
-    <h1>Cadastro</h1>
+<ion-icon name="chevron-back-circle-outline" (click)="home()" class="icon"></ion-icon>   
+   <h1>Cadastro</h1>
+
     <p>
         <label for="senha_cad">Nome</label>
         <input id="senha_cad"  required="required" type="text" placeholder="" />
@@ -28,7 +30,7 @@
   
     <p>
         <label for="senha_cad">CPF</label>
-        <input  id="senha_cad" name="CPF_cad" required="required" type="text" placeholder="" />
+        <input  id="senha_cad" required="required" type="text" placeholder="" />
     </p>
     <p>
         <label for="senha_cad">Telefone</label>
@@ -40,9 +42,5 @@
         <input type="submit" value="Cadastrar" (click)="register()" />
     </p>
 
-    <p class="link">
-        Já tem conta?
-        <a href="login"> Ir para Login </a>
-    </p>
 </form>
 </ion-content>
