@@ -1,21 +1,23 @@
-    
 <ion-header>
   <ion-toolbar>
-        <h1>Login</h1>
+    <ion-title> I-Service </ion-title> 
+
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
   <form method="post" action="">
     <div class="login">
+              <h1>Login</h1>
+
             <p>
         <label for="email">E-mail</label>
-        <input required type="email" id="email" name="email" placeholder="email"  type="text"
+        <input required type="email" id="email" name="email" placeholder=""  type="text"
             required /> 
-    </p>
-       
+    </p> 
     <p>
         <label for="senha">Senha</label>
-        <input required type="password" id="password" name="password" placeholder="password" 
+        <input required type="password" id="password" name="password" placeholder="" 
             type="password" required />
     </p>
 
@@ -23,11 +25,13 @@
         <input type="submit" value="Login" (click)="login()" />
     </p>
 
-    <p class="link ">
+   </div>
+   <div class="add">
+       <p class="link">
         Ainda não tem conta?
-        <a href="register">Cadastre-se</a>
+       <ion-icon name="person-add-outline" (click)="register()" class="icon"></ion-icon> 
     </p> 
-    
-    </div>
+   </div>
+
 </form>
 </ion-content>

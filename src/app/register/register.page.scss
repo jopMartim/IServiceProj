@@ -13,7 +13,8 @@ h1 {
     font-weight: bold;
     text-align: center;
     padding-bottom: 30px;
-    margin-top: -12%;
+    margin-top: 10%;
+    margin-left: -15%;
 }
 
 h1:after {
@@ -98,7 +99,7 @@ input[type="submit"]:hover {
     left: 0px;
     height: 20px;
     width: 95%;
-    // padding: 17px 30px 20px 30px;
+    padding: 17px 30px 20px 30px;
     padding: 23px;
     font-size: 16px;
     text-align: right;
@@ -124,12 +125,11 @@ input[type="submit"]:hover {
     border: 1px solid #4ab3c6;
 }
 
-#cadastro,
-#login {
+.cadastro{
     position: absolute;
     top: 0px;
     width: 88%;
-    padding: 18px 6% 60px 6%;
+    padding: 18px 6px 6px 6px;
     margin: 0 0 35px 0;
     background: #f7f7f7;
     border: 1px solid rgba(147, 184, 189, 0.8);
@@ -140,5 +140,6 @@ input[type="submit"]:hover {
     animation-duration: 0.5s;
     animation-timing-function: ease;
     animation-fill-mode: both;
+margin-left: 5%;
 }
 
