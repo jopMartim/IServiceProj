@@ -12,13 +12,13 @@
 
             <p>
         <label for="email">E-mail</label>
-        <input required type="email" id="email" name="email" placeholder=""  type="text"
+        <input required [{ngModel}]="user.email" id="email" name="email" placeholder="email"  type="email"
             required /> 
     </p> 
     <p>
         <label for="senha">Senha</label>
-        <input required type="password" id="password" name="password" placeholder="" 
-            type="password" required />
+        <input required [{ngModel}]="user.password" type="password" id="password" name="password" placeholder="password" 
+            required />
     </p>
 
     <p>
