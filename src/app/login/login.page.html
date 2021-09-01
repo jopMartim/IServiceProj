@@ -1,7 +1,6 @@
 <ion-header>
   <ion-toolbar>
     <ion-title> I-Service </ion-title> 
-
   </ion-toolbar>
 </ion-header>
 
@@ -9,22 +8,28 @@
   <form method="post" action="">
     <div class="login">
               <h1>Login</h1>
-
             <p>
-        <label for="email">E-mail</label>
+              <ion-item>
+                <ion-label position="floating" [{ngModel}]="email">E-mail</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+
+        <!-- <label position="floating" for="email">E-mail</label>
         <input required [{ngModel}]="email" id="email" name="email" placeholder="email"  type="email"
-            required /> 
+            required />  -->
     </p> 
     <p>
-        <label for="senha">Senha</label>
+      <ion-item>
+        <ion-label position="floating" [{ngModel}]="password">Senha</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+        <!-- <label position="floating" for="senha">Senha</label>
         <input required [{ngModel}]="password" type="password" id="password" name="password" placeholder="password" 
-            required />
+            required /> -->
     </p>
-
     <p>
         <input type="submit" value="Login" (click)="login()" />
     </p>
-
    </div>
    <div class="add">
        <p class="link">
@@ -32,6 +37,5 @@
        <ion-icon name="person-add-outline" (click)="register()" class="icon"></ion-icon> 
     </p> 
    </div>
-
 </form>
 </ion-content>

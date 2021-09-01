@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feed',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedPage implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  navigateService() {
+    this.route.navigate(['/add-service']);
   }
-
 }
