@@ -7,17 +7,20 @@
 </ion-header>
 
 <ion-content>
-  <div class="add-service">
+  <div class="service">
     <ion-item>
-      <ion-label>Categoria do Serviço</ion-label>
+      <ion-label>Categoria
+      </ion-label>
       <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="">
         <ion-select-option value="red">Serviços Gerais</ion-select-option>
         <ion-select-option value="purple">Taxi</ion-select-option>
         <ion-select-option value="yellow">Pedreiro</ion-select-option>
         <ion-select-option value="orange">Eletricista</ion-select-option>
         <ion-select-option value="green">Encanador</ion-select-option>
+
       </ion-select>
     </ion-item>
+    
   <ion-item>
     <ion-label position="floating">Serviço</ion-label>
     <ion-input></ion-input>
@@ -31,15 +34,7 @@
     <ion-input></ion-input>
   </ion-item>
   <ion-list>
-    <ion-list>
-      <ion-list-header>
-        <ion-label>
-Serviços Disponiveis     
-   </ion-label>
-      </ion-list-header>
-    
-      
-    
+    <ion-list>  
     </ion-list>
   </ion-list>
   <ion-button (click)="add_service()"> Adicionar</ion-button>
