@@ -11,3 +11,8 @@ export class register{
   public cpf: string;
   public telefone: number;
 }
+export class add_service{
+public servico: string;
+public descricao: string;
+public valor: number;
+}

@@ -13,10 +13,6 @@
                 <ion-label position="floating" [{ngModel}]="email">E-mail</ion-label>
                 <ion-input></ion-input>
               </ion-item>
-
-        <!-- <label position="floating" for="email">E-mail</label>
-        <input required [{ngModel}]="email" id="email" name="email" placeholder="email"  type="email"
-            required />  -->
     </p> 
     <p>
       <ion-item>
@@ -30,12 +26,11 @@
     <p>
         <input type="submit" value="Login" (click)="login()" />
     </p>
-   </div>
-   <div class="add">
        <p class="link">
         Ainda não tem conta?
        <ion-icon name="person-add-outline" (click)="register()" class="icon"></ion-icon> 
     </p> 
    </div>
+ 
 </form>
 </ion-content>

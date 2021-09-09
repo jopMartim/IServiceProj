@@ -16,6 +16,9 @@ h1 {
     margin-top: 10%;
     margin-left: -15%;
 }
+h2{
+    border-radius: 2px;
+}
 
 h1:after {
     content: ' ';
@@ -36,6 +39,7 @@ h1:after {
 
 p {
     margin-bottom: 15px;
+    border-radius: 15px;
 }
 
 .content p:first-child {
@@ -90,6 +94,8 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background: #4ab3c6;
+    padding: 8px 10px 8px 0px;
+
 }
 
 .link {
@@ -127,7 +133,7 @@ input[type="submit"]:hover {
 
 .cadastro{
     position: absolute;
-    top: 0px;
+    top: 40px;
     width: 88%;
     padding: 18px 6px 6px 6px;
     margin: 0 0 35px 0;

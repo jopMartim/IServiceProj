@@ -13,34 +13,43 @@
        <ion-icon name="chevron-back-circle-outline" (click)="home()" class="icon"></ion-icon>   
        Cadastro</h1>
 
-    <p>
-        <label for="senha_cad">Nome</label>
-        <input id="senha_cad"  required="required" type="text" placeholder="" />
-    </p>
-    <p>
-        <label for="email_cad">E-mail</label>
-        <input  id="email_cad"  required="required" type="email" placeholder="" />
-    </p>
 
-    <p>
-        <label for="senha_cad">Senha</label>
-        <input  id="senha_cad"  required="required" type="password" placeholder="" />
-    </p>
-    
-    <p>
-        <label for="senha_cad">Confirmar Senha</label>
-        <input  id="senha_cad"  required="required" type="password" placeholder="" />
-    </p>
-  
-    <p>
-        <label for="senha_cad">CPF</label>
-        <input  id="senha_cad" required="required" type="text" placeholder="" />
-    </p>
-    <p>
-        <label for="senha_cad">Telefone</label>
-        <input  id="senha_cad"  required="required" type="text" placeholder="" />
-    </p>
-
+     <p>
+              <ion-item>
+                <ion-label position="floating" [{ngModel}]="nome">Nome</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+    </p> 
+     <p>
+              <ion-item>
+                <ion-label position="floating" [{ngModel}]="email">E-mail</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+    </p> 
+     <p>
+              <ion-item>
+                <ion-label position="floating" [{ngModel}]="senha">Senha</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+    </p> 
+     <p>
+              <ion-item>
+                <ion-label position="floating" [{ngModel}]="confirmarSenha">Confirmar Senha</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+    </p> 
+     <p>
+              <ion-item>
+                <ion-label position="floating" [{ngModel}]="cpf">CPF</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+    </p> 
+     <p>
+              <ion-item>
+                <ion-label position="floating" [{ngModel}]="telefone">Telefone</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+    </p> 
 
     <p>
         <input type="submit" value="Cadastrar" (click)="register()" />
