@@ -9,15 +9,23 @@
 <ion-content>
   <div class="service">
     <ion-item>
+    
       <ion-label>Categoria
       </ion-label>
       <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="">
         <ion-select-option value="red">Serviços Gerais</ion-select-option>
         <ion-select-option value="purple">Taxi</ion-select-option>
-        <ion-select-option value="yellow">Pedreiro</ion-select-option>
-        <ion-select-option value="orange">Eletricista</ion-select-option>
-        <ion-select-option value="green">Encanador</ion-select-option>
-
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label> Sub-Categoria
+      </ion-label>
+      <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="">
+        <ion-select-option value="red">Serviços Gerais</ion-select-option>
+        <ion-select-option value="purple">Encandor</ion-select-option>
+        <ion-select-option value="purple">Eletricista</ion-select-option>
+        <ion-select-option value="purple">Servente</ion-select-option>
+    
       </ion-select>
     </ion-item>
     
