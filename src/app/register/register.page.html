@@ -26,18 +26,7 @@
                 <ion-input></ion-input>
               </ion-item>
     </p> 
-     <p>
-              <ion-item>
-                <ion-label position="floating" [{ngModel}]="senha">Senha</ion-label>
-                <ion-input></ion-input>
-              </ion-item>
-    </p> 
-     <p>
-              <ion-item>
-                <ion-label position="floating" [{ngModel}]="confirmarSenha">Confirmar Senha</ion-label>
-                <ion-input></ion-input>
-              </ion-item>
-    </p> 
+     
      <p>
               <ion-item>
                 <ion-label position="floating" [{ngModel}]="cpf">CPF</ion-label>
@@ -50,7 +39,18 @@
                 <ion-input></ion-input>
               </ion-item>
     </p> 
-
+    <p>
+      <ion-item>
+        <ion-label position="floating" [{ngModel}]="senha">Senha</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+</p> 
+<p>
+      <ion-item>
+        <ion-label position="floating" [{ngModel}]="confirmarSenha">Confirmar Senha</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+</p> 
     <p>
         <input type="submit" value="Cadastrar" (click)="register()" />
     </p>
