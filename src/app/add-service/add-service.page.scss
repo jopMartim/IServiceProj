@@ -7,7 +7,8 @@ ion-icon{
 }
 ion-button{
     text-align: center;
-    margin-left: 70%;
+    margin-left: 65%;
+    margin-top: 10%;
     font-size: 17px;
 }
 .service{
@@ -18,7 +19,21 @@ ion-button{
     top: 5%;
 }
 .service{
-    position: relative;
-}
-  
+    position: absolute;
+    top: 15%;
+    width: 88%;
+    padding: 18px 6% 60px 6%;
+    margin: 0 0 35px 0;
+    background: #0b1c1f;
+    border: 1px solid rgba(147, 184, 189, 0.8);
+    border-radius: 15px;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    margin-left: 5%;
 
+}
+ 

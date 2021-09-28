@@ -134,10 +134,9 @@ input[type="submit"]:hover {
 .cadastro{
     position: absolute;
     top: 40px;
-    width: 88%;
+    width: 90%;
     padding: 18px 6px 6px 6px;
     margin: 0 0 35px 0;
-    background: #d9f3f7;
     border: 1px solid rgba(147, 184, 189, 0.8);
     border-radius: 5px;
     -webkit-animation-duration: 0.5s;
@@ -147,5 +146,6 @@ input[type="submit"]:hover {
     animation-timing-function: ease;
     animation-fill-mode: both;
 margin-left: 5%;
+background-color: #0b1c1f;
 }
 
