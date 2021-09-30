@@ -4,48 +4,55 @@ import { AlertController, NavController, NavParams } from '@ionic/angular';
 import { AuthProvider } from '../auth/auth';
 import { FeedPage } from '../feed/feed.page';
 
+
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'page-login',
+  templateUrl: 'login.html',
 })
-export class LoginPage implements OnInit {
-   email:string = '';
+export class LoginPage {
+
+
+  email:string = '';
   password:string = '';
+
   errorMsg:string;
-  
+
+
+
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
-    public authService: AuthProvider,
-    private route: Router,
+    public authService: AuthProvider ,
+   
     public alertCtrl: AlertController ,
-
-    ) { }
-
- 
-  ngOnInit() { }
   
+  ) {
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
 
-  errorFunc(message){
+  async errorFunc(message){
     let alert = this.alertCtrl.create({
-      title: 'Warning!',
-      subTitle: message,
+      header: 'Warning!',
+      message: 'error',
       buttons: ['OK']
     });
     (await alert).present();
   }
 
-  login() {
+
+
+
+logIn(){
+ 
     if (this.email.trim() !==''    ) {    
       
       console.log(this.email.trim() + "   " + this.password.trim() )
        
       if (this.password.trim()  === '') {
-        this.('Please put your password')
+        this.errorFunc('Please put your password')
  
       }else{
  
@@ -57,12 +64,12 @@ export class LoginPage implements OnInit {
         
          this.authService.login(credentials).then((result) => {
             console.log(result);
-            this.navCtrl.(FeedPage);
+            this.navCtrl.navigateForward('FeedPage');
            
         }, (err) => {
      
             console.log(err);
-            this. ('Wrong credentials ! try again')
+            this. errorFunc('Wrong credentials ! try again')
             console.log("credentials: "+JSON.stringify(credentials))
             
         });
@@ -72,15 +79,13 @@ export class LoginPage implements OnInit {
    }
    else{
     
-    this. ('Please put a valid password !  for ex:(123456)')
+    this. errorFunc('Please put a vaild password !  for ex:(123456)')
    
     }
  
-  }
 
-  register() {
-    this.route.navigate(['/register']);
-  }
-  
- 
+
+}
+
+
 }
