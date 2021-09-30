@@ -4,11 +4,12 @@ export class login{
  
 }
 export class register{
-  public usuario: string;
+  public nome: string;
   public email: string;
+  public cpf: string;
   public senha: string;
   public confirmarsenha: string;
-  public cpf: string;
+
   public telefone: number;
 }
 export class add_service{
