@@ -1,104 +1,141 @@
- 
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 
+
+import {apiKey} from "../../app/apiurls/serverurls.js";
+import { Http , Headers } from '@angular/http';
+import 'rxjs/add/operator/map';
 import { Storage } from '@ionic/storage';
 
 
 /*
-  Generated class for the AuthProvider provider.
+  Generated class for the CrudProvider provider.
 
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
 @Injectable()
-export class AuthProvider {
-  public token: any;
+export class CrudProvider {
 
-  constructor(public storage: Storage , public http: Http) {
-    console.log('Hello AuthProvider Provider');
+  constructor(public storage: Storage ,
+    public http: Http, 
+     ) {
+    console.log('Hello CrudProvider Provider');
   }
 
 
 
 
-
-
-  createAccount(details){
+  getPosts(){
     return new Promise((resolve, reject) => {
- 
-        let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
- 
-        this.http.post(apiKey+'api/user/register', JSON.stringify(details), {headers: headers})
-          .subscribe(res => {
-            let data = res.json();
-           // this.token = data.token;
-            //this.storage.set('token', data.token);
-            resolve(data);
- 
-          }, (err) => {
-            reject(err);
-          });
-    });
-  }
+     this.storage.get('token').then((value) => {
 
+       let headers = new Headers();
+       headers.append('Content-Type', 'application/json');
+       headers.append('Authorization', 'Bearer '+value);
 
-
-
-
-
-  login(credentials){
-    return new Promise((resolve, reject) => {
-        let headers = new Headers();
-       // headers.append('Content-Type', 'application/json');
-       headers.append('Access-Control-Allow-Origin' , '*');
-       headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
-       headers.append('Accept','application/json');
-       headers.append('content-type','application/json');
-     
-        this.http.post(apiKey+'api/user/login', JSON.stringify(credentials), {headers: headers})
-          .subscribe(res => {
-            let data = res.json();
-            this.token = data.token;
-            this.storage.set('token', data.token);
-           
-            resolve(data);
-   }, (err) => {
-            reject(err);
-          
-          });  });
- 
-  }
-
-
-
-
-
-  checkAuthentication(){
-
-    return new Promise((resolve, reject) => {
-    this.storage.get('token').then((value) => {
- 
-      this.token = value;
-
-      resolve(this.token)
-
-
-    }) 
-  });        
-
-
-
-  }
-
-
-
-
-  logout(){
-    this.storage.set('token', '');
+       console.log('value: ' + value);
   
-   }
+       this.http.get(apiKey+'api/books', {headers: headers})
+         .map(res => res.json())
+         .subscribe(data => {
+           resolve(data);
+         }, (err) => {
+           reject(err);
+         }); 
+     }) 
+
+   });
+
+ }
+
+
+
+
+
+
+
+
+ insertPosts(postInfo){
+  return new Promise((resolve, reject) => {
+   this.storage.get('token').then((value) => {
+
+     let headers = new Headers();
+     headers.append('Content-Type', 'application/json');
+     headers.append('Authorization', 'Bearer '+value);
+     console.log('value: ' + value);
+
+     this.http.post(apiKey+'api/books',  JSON.stringify(postInfo),  {headers: headers})
+       .map(res => res.json())
+       .subscribe(data => {
+         resolve(data);
+       }, (err) => {
+         reject(err);
+       }); 
+   }) 
+
+ });
+
+}
+
+
+
+
+
+
+
+editPosts(id,postInfo){
+  return new Promise((resolve, reject) => {
+   this.storage.get('token').then((value) => {
+
+     let headers = new Headers();
+     headers.append('Content-Type', 'application/json');
+     headers.append('Authorization', 'Bearer '+value);
+     console.log('value: ' + value);
+
+     this.http.put(apiKey+'api/books/' +id ,  JSON.stringify(postInfo),  {headers: headers})
+       .map(res => res.json())
+       .subscribe(data => {
+         resolve(data);
+       }, (err) => {
+         reject(err);
+       }); 
+   }) 
+
+ });
+
+}
+
+
+
+
+
+
+deletePosts(id ){
+  return new Promise((resolve, reject) => {
+   this.storage.get('token').then((value) => {
+
+     let headers = new Headers();
+     headers.append('Content-Type', 'application/json');
+     headers.append('Authorization', 'Bearer '+value);
+     console.log('value: ' + value);
+
+     this.http.delete(apiKey+'api/books/' +id,    {headers: headers})
+       .map(res => res.json())
+       .subscribe(data => {
+         resolve(data);
+       }, (err) => {
+         reject(err);
+       }); 
+   }) 
+
+ });
+
+}
+
+
+
 
 
 
